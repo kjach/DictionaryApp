@@ -9,30 +9,29 @@
 
     <TextView
         android:id="@+id/resultTextView"
-        android:layout_width="313dp"
-        android:layout_height="166dp"
+        android:layout_width="380dp"
+        android:layout_height="162dp"
         android:background="@drawable/background1"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.454" />
+        app:layout_constraintVertical_bias="0.456" />
 
     <TextView
         android:id="@+id/wordTextView"
-        android:layout_width="246dp"
+        android:layout_width="387dp"
         android:layout_height="38dp"
         android:textAllCaps="true"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.054" />
 
     <TextView
         android:id="@+id/partOfSpeechTextView"
@@ -48,8 +47,8 @@
 
     <TextView
         android:id="@+id/phoneticTextView"
-        android:layout_width="192dp"
-        android:layout_height="24dp"
+        android:layout_width="281dp"
+        android:layout_height="29dp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,9 +65,9 @@
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintHorizontal_bias="0.957"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136"
+        app:layout_constraintVertical_bias="0.135"
         app:srcCompat="@drawable/sound" />
 </androidx.constraintlayout.widget.ConstraintLayout>

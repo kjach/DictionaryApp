@@ -49,13 +49,13 @@ public class DictionaryEntryActivity extends AppCompatActivity {
 //                for (int i = 0; i < array.length(); i++) {
                 JSONObject jsonObject1 = array.getJSONObject(0);
 //                    Log.i("Word..", jsonObject1.toString());
-                String wordFromDictionary = jsonObject1.getString("word");
-                String phonetic = jsonObject1.getString("phonetic");
-                String audioURL = jsonObject1.getJSONArray("phonetics").getJSONObject(1).getString("audio");
+                String wordFromDictionary = jsonObject1.optString("word");
+                String phonetic = jsonObject1.optString("phonetic");
+                String audioURL = jsonObject1.getJSONArray("phonetics").getJSONObject(0).optString("audio");
 //                    String audioURL = jsonObject1.getString("phonetic");
 //                    String audioURL = jsonObject1.getJSONArray("phonetics").getJSONObject(0).getString("audio");
-                String partOfSpeech = jsonObject1.getJSONArray("meanings").getJSONObject(0).getString("partOfSpeech");
-                String definition = jsonObject1.getJSONArray("meanings").getJSONObject(0).getJSONArray("definitions").getJSONObject(0).getString("definition");
+                String partOfSpeech = jsonObject1.getJSONArray("meanings").getJSONObject(0).optString("partOfSpeech");
+                String definition = jsonObject1.getJSONArray("meanings").getJSONObject(0).getJSONArray("definitions").getJSONObject(0).optString("definition");
 
                 dictionaryWord = new Word(wordFromDictionary, phonetic, audioURL,partOfSpeech, definition);
 //                    wordTextView.setText(jsonObject1.getString("word"));
