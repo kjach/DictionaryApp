@@ -9,53 +9,34 @@
 
     <TextView
         android:id="@+id/resultTextView"
-        android:layout_width="380dp"
-        android:layout_height="162dp"
+        android:layout_width="272dp"
+        android:layout_height="136dp"
+        android:autoSizeTextType="uniform"
         android:background="@drawable/background1"
+        android:padding="10dp"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.456" />
+        app:layout_constraintVertical_bias="0.673" />
 
     <TextView
         android:id="@+id/wordTextView"
         android:layout_width="387dp"
         android:layout_height="38dp"
+        android:textAlignment="center"
         android:textAllCaps="true"
+        android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.054" />
-
-    <TextView
-        android:id="@+id/partOfSpeechTextView"
-        android:layout_width="126dp"
-        android:layout_height="33dp"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/resultTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wordTextView"
-        app:layout_constraintVertical_bias="0.872" />
-
-    <TextView
-        android:id="@+id/phoneticTextView"
-        android:layout_width="281dp"
-        android:layout_height="29dp"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintVertical_bias="0.202" />
 
     <ImageView
         android:id="@+id/soundImageView"
@@ -65,9 +46,36 @@
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.957"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.135"
+        app:layout_constraintVertical_bias="0.34"
         app:srcCompat="@drawable/sound" />
+
+    <TextView
+        android:id="@+id/partOfSpeechTextView"
+        android:layout_width="126dp"
+        android:layout_height="33dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/resultTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wordTextView"
+        app:layout_constraintVertical_bias="0.884" />
+
+    <TextView
+        android:id="@+id/phoneticTextView"
+        android:layout_width="281dp"
+        android:layout_height="29dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.283" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
