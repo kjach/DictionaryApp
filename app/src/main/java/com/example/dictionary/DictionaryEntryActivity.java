@@ -23,7 +23,6 @@ public class DictionaryEntryActivity extends AppCompatActivity {
     TextView wordTextView;
     TextView partOfSpeechTextView;
     TextView phoneticTextView;
-//    Button playSoundBtn;
     ImageView soundImageView;
 
     Word dictionaryWord;
@@ -38,7 +37,6 @@ public class DictionaryEntryActivity extends AppCompatActivity {
         wordTextView = findViewById(R.id.wordTextView);
         partOfSpeechTextView = findViewById(R.id.partOfSpeechTextView);
         phoneticTextView = findViewById(R.id.phoneticTextView);
-//        playSoundBtn = findViewById(R.id.playSoundBtn);
         soundImageView = findViewById(R.id.soundImageView);
 
         Bundle extras = getIntent().getExtras();
@@ -46,24 +44,18 @@ public class DictionaryEntryActivity extends AppCompatActivity {
             try{
                 String word = extras.getString("wordJSON");
                 JSONArray array = new JSONArray(word);
-//                for (int i = 0; i < array.length(); i++) {
                 JSONObject jsonObject1 = array.getJSONObject(0);
-//                    Log.i("Word..", jsonObject1.toString());
                 String wordFromDictionary = jsonObject1.optString("word");
                 String phonetic = jsonObject1.optString("phonetic");
                 String audioURL = jsonObject1.getJSONArray("phonetics").getJSONObject(0).optString("audio");
-//                    String audioURL = jsonObject1.getString("phonetic");
-//                    String audioURL = jsonObject1.getJSONArray("phonetics").getJSONObject(0).getString("audio");
                 String partOfSpeech = jsonObject1.getJSONArray("meanings").getJSONObject(0).optString("partOfSpeech");
                 String definition = jsonObject1.getJSONArray("meanings").getJSONObject(0).getJSONArray("definitions").getJSONObject(0).optString("definition");
 
                 dictionaryWord = new Word(wordFromDictionary, phonetic, audioURL,partOfSpeech, definition);
-//                    wordTextView.setText(jsonObject1.getString("word"));
                 wordTextView.setText(dictionaryWord.word);
                 partOfSpeechTextView.setText(dictionaryWord.partOfSpeech);
                 resultTextView.setText(dictionaryWord.definition);
                 phoneticTextView.setText(dictionaryWord.phonetic);
-//                }
 
             } catch(JSONException e) {
                 e.printStackTrace();

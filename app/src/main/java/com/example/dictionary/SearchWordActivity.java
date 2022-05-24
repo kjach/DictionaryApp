@@ -63,10 +63,7 @@ public class SearchWordActivity extends AppCompatActivity {
             super.onPostExecute(s);
             Log.i("json", s);
             try {
-//                JSONObject jsonObject = new JSONObject(s);
                 JSONArray jsonArray = new JSONArray(s);
-//                String dictionaryWord = jsonObject.toString();
-//                JSONArray jsonArray = jsonObject.getJSONArray("0");
                 Intent intent = new Intent(SearchWordActivity.this, DictionaryEntryActivity.class);
                 intent.putExtra("wordJSON", jsonArray.toString());
                 startActivity(intent);
